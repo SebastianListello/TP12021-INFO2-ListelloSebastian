@@ -29,7 +29,7 @@ void test()
       PORTB = B00001110;
        //         GFEDC;
       break;
-  }
+ }
 }
   void setup() //En la función setup() únicamente se inicializa el puerto Serial y se configuran los pines digitales. 
  {
