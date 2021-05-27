@@ -32,10 +32,12 @@ void test()
   }
 }
   void setup() //En la función setup() únicamente se inicializa el puerto Serial y se configuran los pines digitales. 
-  {
+ {
     Serial.begin(9600);
     DDRD = B11000000; //Definimos las salidas, las activamos con un 1, y utilizamos del 6 al 7.
+    DDRD = DDRD & B11000111;
     DDRB = B00011111; //Utilizamos las salidas del 8 al 12.
+    DDRB = DDRB | B00000000;
   }
  void loop() //aca es donde se calcula el tiempo que tarda la función en ejecutarse. 
  {
